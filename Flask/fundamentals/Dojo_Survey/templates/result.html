@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+  </head>
+  <style>
+
+    .info-container {
+      margin: auto 0;
+      
+      color: white;
+      
+    }
+    
+    .box {
+      text-align: center;
+      background-color: darkslateblue;
+      height: 400px;
+      width: 300px;
+      font-size: 1.1rem;
+      border: 1px solid grey;
+
+    }
+
+  </style>
+
+
+  <body>
+    <!-- Picking what data to display on html page -->
+    <h2>Submitted Info</h2>
+    <div class="info-container">
+      <div class="box">
+      <p>Name : {{ session['name'] }}</p>
+      <p>Location : {{ session['location'] }}</p>
+      <p>Language : {{ session['language'] }}</p>
+      <p>Comment : {{ session['comment'] }} </p>
+      <!-- <p>Location : {{ loc }}</p> -->
+      <a href="/logout">Logout</a>
+      </div>
+    </div>
+  </body>
+</html>
